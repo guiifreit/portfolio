@@ -1,0 +1,95 @@
+html {
+    scroll-behavior: smooth; /* Comportamento de rolagem suave */
+}
+
+:root {
+    --bs-primary: #2c3e50; /* Cor personalizada */
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.5s forwards;
+}
+.navbar {
+    transition: all 0.3s ease-in-out; /* Efeito suave */
+}
+
+.btn-primary {
+    border-radius: 30px;
+    padding: 12px 30px;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Efeito de levitação */
+}
+
+footer {
+    border-top: 2px solid var(--bs-primary);
+}
+
+footer a:hover {
+    color: var(--bs-primary) !important;
+    transition: 0.3s;
+}
+
+/* Animação de Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Classe base (elementos ocultos inicialmente) */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+/* Quando o elemento entra na tela */
+.scroll-animation.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Outras variações */
+.scroll-left {
+    transform: translateX(-50px);
+}
+
+.scroll-right {
+    transform: translateX(50px);
+}
+
+.scroll-zoom {
+    transform: scale(0.9);
+}
+
+.scroll-left.show,
+.scroll-right.show,
+.scroll-zoom.show {
+    transform: none;
+    opacity: 1;
+}
